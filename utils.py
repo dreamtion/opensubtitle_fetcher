@@ -3,6 +3,9 @@ import struct
 
 
 def hashfile(name):
+    """This is the copy of example hashing function:
+    http://trac.opensubtitles.org/projects/opensubtitles/wiki/HashSourceCodes
+    """
     try:
         longlongformat = '<q'  # little-endian long long
         bytesize = struct.calcsize(longlongformat)
@@ -31,6 +34,8 @@ def hashfile(name):
 
 
 def unzip(filename, output_dir, delete=True):
+    """Re-implement of command 'unzip -d FILENAME'
+    """
     import gzip
 
     if not filename.endswith('.gz'):

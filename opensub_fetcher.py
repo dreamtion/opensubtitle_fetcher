@@ -13,8 +13,8 @@ xmlrpc_client.MAXINT = sys.maxint
 
 OPENSUB_URL = "http://api.opensubtitles.org/xml-rpc"
 USER_AGENT = 'OSTestUserAgent'
-USERNAME = ''
-PASSWORD = ''
+USERNAME = ''  # not needed
+PASSWORD = ''  # For test user agent
 LANGUAGE = 'en'
 VERBOSE = False
 LANGS = ('eng', 'zht', 'chi')
@@ -106,7 +106,6 @@ def fetch_sub(filename, directory=None, token=None):
                 print "Unzipped to %s" % filename
         except IOError as io_error:
             print io_error
-    #my_open_sub.logout()
 
 
 if __name__ == '__main__':
