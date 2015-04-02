@@ -59,7 +59,7 @@ class MyOpenSub(object):
             return
         for lang in LANGS:
             query = {'moviehash': file_hash,
-                     'moviebytesize': file_bytes,
+                     'moviebytesize': str(file_bytes),
                      'sublanguageid': lang}
 
             result = self.server.SearchSubtitles(self.token, [query])
